@@ -1,0 +1,31 @@
+.scrolling-image-container {
+    overflow: hidden;
+  }
+
+  .scrolling-image {
+    --imageHeight: 100vh;
+    background: url('../assets/webbBackgroundimg.jpg') repeat-y;
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: cover;
+    animation: scroll 12s linear infinite;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    backdrop-filter: blur(8px) brightness(20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes scroll { 
+    from {background-position: center 0;}
+    to {background-position: center calc(100% - 100vh);}
+  }
+.TitleText {
+ color: white;
+
+}
