@@ -1,31 +1,49 @@
-.scrolling-image-container {
-    overflow: hidden;
-  }
-
-  .scrolling-image {
-    --imageHeight: 100vh;
-    background: url('../assets/webbBackgroundimg.jpg') repeat-y;
-    background-repeat: repeat-y;
-    background-position: center top;
+.main-image {
+    height: 40vh;
+    width: 100vw;
+    position: relative;
     background-size: cover;
-    animation: scroll 12s linear infinite;
-    height: 100vh;
+    background-position: 50% 50%;
+    background-image: url('../assets/webbBackgroundimg.jpg');
+    opacity: 0.9;
+}
+.overlay {
+    position: absolute;
+    height: 100%;
     width: 100%;
-    position: fixed;
-    top: 0;
+    top: 10px;
     left: 0;
-    z-index: -1;
-    backdrop-filter: blur(8px) brightness(20%);
+    color: #fff;
+    font-size: large;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  @keyframes scroll { 
-    from {background-position: center 0;}
-    to {background-position: center calc(100% - 100vh);}
-  }
-.TitleText {
- color: white;
-
+    flex-direction: column;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
+
+  .scrolling-image {
+    place-content: center;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 30px;
+    z-index: -10;
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    width: 100%;
+    background-color: steelblue;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(0 0 0 / 25%),
+        rgb(0 0 255 / 25%)
+      ), url('../assets/webbBackgroundimg.jpg');
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    overflow: hidden;
+    color: #fff;
+  }
