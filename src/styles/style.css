@@ -1,31 +1,60 @@
-.scrolling-image-container {
-    overflow: hidden;
-  }
 
-  .scrolling-image {
-    --imageHeight: 100vh;
-    background: url('../assets/webbBackgroundimg.jpg') repeat-y;
-    background-repeat: repeat-y;
-    background-position: center top;
-    background-size: cover;
-    animation: scroll 12s linear infinite;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    backdrop-filter: blur(8px) brightness(20%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @keyframes scroll { 
-    from {background-position: center 0;}
-    to {background-position: center calc(100% - 100vh);}
-  }
-.TitleText {
- color: white;
-
+body {
+    background-image: url('../assets/backgroundImg.jpg');
+    font-family: Arial, sans-serif;
 }
+a {
+    color: #0f056d; 
+  }
+
+.header {
+    padding: 40px;
+    text-align: center;
+    background: #f9f7f7;
+    margin:30px;
+    font-size:20px;
+  }
+  .header-links {
+    padding-right: 10px;
+  }
+
+/* Include padding and border in total box size*/
+* {
+  box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    column-gap: 5em;
+}
+/* Create two equal columns that float next to each other */
+.column-2 {
+  float: left;
+  padding: 20px;
+  padding-left:70px;
+  padding-right: 70px;
+  width: 45%;
+  height: 500px;
+  margin:30px;
+  margin-right:30px;
+  margin-bottom: 70px;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  line-height:2;
+}
+.column-3 {
+    margin-left: auto;
+    width: 45%;
+    padding: 10px;  
+    padding-left:70px;
+    padding-right: 70px;
+    height: 500px;
+    margin:30px;
+    margin-right: 30px;
+    margin-bottom: 70px;
+    background: #fdc830; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdc830, #f37335); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdc830, #f37335);
+    line-height:2;
+  }
