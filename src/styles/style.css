@@ -27,6 +27,12 @@ a {
     display: flex;
     column-gap: 5em;
 }
+.aboutme-text {
+  width: 45%;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
 /* Create two equal columns that float next to each other */
 .column-2 {
   float: left;
